@@ -1,5 +1,7 @@
 package com.aat.application.data.entity;
 
+import com.aat.application.annotations.DisplayName;
+import com.aat.application.annotations.ShowField;
 import com.aat.application.core.data.entity.ZJTEntity;
 import com.vaadin.flow.router.PageTitle;
 import jakarta.persistence.*;
@@ -17,12 +19,15 @@ public class ZJTPricingType implements ZJTEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "zjt_pricingtype_id")
+    @ShowField(show = false)
     private int zjt_pricingtype_id;
 
     @Column
+    @DisplayName(value = "Name")
     private String name = "";
 
     @Column
+    @DisplayName(value = "Description")
     private String description = "";
 
     public int getZjt_pricingtype_id() {
