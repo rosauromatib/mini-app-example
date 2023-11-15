@@ -2,18 +2,19 @@ package com.aat.application.data.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vaadin.flow.router.PageTitle;
-import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "zjt_vehicle")
+@Table(name = "zjt_driver")
 @PageTitle("TimeLine")
-@AttributeOverride(name = "content", column = @Column(name = "title"))
-public class ZJTVehicle extends ZJTSuperTimeLineNode implements Serializable {
-
-    @OneToMany(mappedBy = "vehicle", cascade = CascadeType.ALL)
+public class ZJTDriver extends ZJTSuperTimeLineNode implements Serializable {
+    @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<ZJTVehicleBooking> items;
 

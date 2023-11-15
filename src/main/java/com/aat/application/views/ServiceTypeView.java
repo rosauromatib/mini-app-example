@@ -1,6 +1,5 @@
 package com.aat.application.views;
 
-import com.aat.application.data.entity.ZJTVehicle;
 import com.aat.application.data.entity.ZJTVehicleServiceType;
 import com.aat.application.data.repository.BaseEntityRepository;
 import com.aat.application.data.service.TableInfoService;
