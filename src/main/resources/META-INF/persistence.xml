@@ -8,6 +8,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.aat.application.data.entity.ZJTTimeLineNode</class>
         <class>com.aat.application.data.entity.ZJTTimeLineItem</class>
+        <class>com.aat.application.data.entity.ZJTVehicleServiceType</class>
             <!--        <class>com.aat.application.data.entity.ZJTElement</class>-->
         <!--        <class>com.aat.application.data.entity.ZJTPricingType</class>-->
         <!--        <class>com.example.EntityClass2</class>-->
