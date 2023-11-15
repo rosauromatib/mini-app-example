@@ -1,13 +1,12 @@
 package com.aat.application.views;
 
-import com.aat.application.data.entity.*;
-import com.vaadin.flow.component.dependency.CssImport;
-import org.vaadin.lineawesome.LineAwesomeIcon;
-
 import com.aat.application.components.appnav.AppNav;
 import com.aat.application.components.appnav.AppNavItem;
+import com.aat.application.data.entity.*;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.vaadin.lineawesome.LineAwesomeIcon;
 
 /**
  * The main view is a top-level placeholder for other views.
@@ -29,9 +28,12 @@ public class MainLayout extends CoreMainLayout {
         nav.addItem(parent);
         parent.addItem(new AppNavItem("Tui Grid", "pricing-type", LineAwesomeIcon.PRODUCT_HUNT.create())
                 .withParameter("entityClass", ZJTPricingType.class.getName())
-                .withParameter("layout", this.getClass().getName()));
+                .withParameter( "layout", this.getClass().getName()));
         parent.addItem(new AppNavItem("Service Type", "servicetype", LineAwesomeIcon.PRODUCT_HUNT.create())
                 .withParameter("entityClass", ZJTVehicleServiceType.class.getName())
+                .withParameter("layout", this.getClass().getName()));
+        parent.addItem(new AppNavItem("Service Schedule", "serviceschedule", LineAwesomeIcon.PRODUCT_HUNT.create())
+                .withParameter("entityClass", ZJTVehicleServiceSchedule.class.getName())
                 .withParameter("layout", this.getClass().getName()));
         parent.addItem(new AppNavItem("Group TimeLine", "group-timeline", LineAwesomeIcon.PRODUCT_HUNT.create())
                 .withParameter( "entityClass", ZJTTimeLineItem.class.getName())
@@ -42,7 +44,7 @@ public class MainLayout extends CoreMainLayout {
         parent.addItem(new AppNavItem("Driver TimeLine", "driver-timeline", LineAwesomeIcon.PRODUCT_HUNT.create())
                 .withParameter( "entityClass", ZJTVehicleBooking.class.getName())
                 .withParameter( "layout", this.getClass().getName()));
-
         return nav;
     }
 }
+
